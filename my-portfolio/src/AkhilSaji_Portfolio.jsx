@@ -1,7 +1,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform, useSpring, AnimatePresence, useInView } from "framer-motion";
-
+import profileImg from "./assets/profile.jpg";
 // ─── DATA ────────────────────────────────────────────────────────────────────
 const NAV_LINKS = ["About", "Skills", "Experience", "Projects", "Education", "Contact"];
 
@@ -363,7 +363,7 @@ function TypeWriter({ words }) {
   }, [text, del, idx, words]);
   return (
     <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
-      {text}<span className="animate-pulse text-cyan-400">|</span>
+      {text}<span className="animate-pulse text-cyan-400"></span>
     </span>
   );
 }
@@ -490,7 +490,7 @@ function About() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const stats = [
     { val: "3+", label: "Years Learning" },
-    { val: "20+", label: "Students Trained" },
+    { val: "100+", label: "Students Trained" },
     { val: "5+", label: "Projects Built" },
     { val: "3", label: "Languages" },
   ];
@@ -507,7 +507,11 @@ function About() {
             <div className="relative">
               <div className="w-72 h-72 rounded-3xl bg-gradient-to-br from-cyan-500/20 via-blue-600/10 to-purple-500/20 backdrop-blur-xl border border-white/10 flex items-center justify-center relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/5 to-purple-500/5" />
-                <span className="text-9xl select-none">👨l</span>
+      <img
+      src={profileImg}
+      alt="Akhil Saji"
+      className="w-full h-full object-cover rounded-3xl"
+    />
                 {/* Animated border */}
                 <motion.div
                   animate={{ rotate: 360 }}
