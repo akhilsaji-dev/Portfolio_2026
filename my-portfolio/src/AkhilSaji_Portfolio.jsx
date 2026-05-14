@@ -2,21 +2,69 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform, useSpring, AnimatePresence, useInView } from "framer-motion";
 import profileImg from "./assets/profile.jpg";
+
+
+// iconss
+import {
+  SiJavascript,
+  SiPython,
+  SiReact,
+  SiTailwindcss,
+  SiFramer,
+  SiBootstrap,
+  SiMui,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiDjango,
+  SiGit,
+  SiGithub,
+  SiPostman,
+  SiJsonwebtokens,
+  SiVercel,
+  SiNetlify,
+  SiLinux,
+  SiMysql,
+  SiC,
+  SiCplusplus,
+   SiSharp,
+} from "react-icons/si";
 // ─── DATA ────────────────────────────────────────────────────────────────────
 const NAV_LINKS = ["About", "Skills", "Experience", "Projects", "Education", "Contact"];
 
 const SKILLS = {
-  "Languages": ["JavaScript (ES6+)", "Python", "HTML5", "CSS3"],
+  "Languages": ["JavaScript (ES6+)", "Python", "Java", "C#", "C", "C++", ],
   "Frontend": ["React.js", "Tailwind CSS", "Framer Motion", "Bootstrap", "Material UI"],
-  "Backend": ["Node.js", "Express.js", "MongoDB", "RESTful APIs", "Django REST Framework"],
+  "Backend": ["Node.js", "Express.js", "MongoDB", "RESTful APIs", "Django REST Framework", "MySQL"],
   "Tools": ["Git", "GitHub", "Postman", "JWT", "Vercel", "Netlify", "Linux"],
 };
-
 const SKILL_ICONS = {
-  "JavaScript (ES6+)": "⚡", "Python": "🐍", "HTML5": "🌐", "CSS3": "🎨",
-  "React.js": "⚛️", "Tailwind CSS": "💨", "Framer Motion": "🎞️", "Bootstrap": "🅱️", "Material UI": "📦",
-  "Node.js": "💚", "Express.js": "🚂", "MongoDB": "🍃", "RESTful APIs": "🔗", "Django REST Framework": "🦄",
-  "Git": "🔀", "GitHub": "🐙", "Postman": "📮", "JWT": "🔑", "Vercel": "▲", "Netlify": "🌊", "Linux": "🐧",
+  "JavaScript (ES6+)": <SiJavascript color="#F7DF1E" />,
+  "Python": <SiPython color="#3776AB" />,
+  "C#": <SiSharp color="#99CC00" />,
+  "C": <SiC color="#A8B9CC" />,
+  "C++": <SiCplusplus color="#00599C" />,
+
+  "React.js": <SiReact color="#61DAFB" />,
+  "Tailwind CSS": <SiTailwindcss color="#06B6D4" />,
+  "Framer Motion": <SiFramer color="#0055FF" />,
+  "Bootstrap": <SiBootstrap color="#7952B3" />,
+  "Material UI": <SiMui color="#007FFF" />,
+
+  "Node.js": <SiNodedotjs color="#339933" />,
+  "Express.js": <SiExpress color="#FFFFFF" />,
+  "MongoDB": <SiMongodb color="#47A248" />,
+  "RESTful APIs": <SiJsonwebtokens color="#000000" />,
+  "Django REST Framework": <SiDjango color="#092E20" />,
+  "MySQL": <SiMysql color="#4479A1" />,
+
+  "Git": <SiGit color="#F05032" />,
+  "GitHub": <SiGithub color="#FFFFFF" />,
+  "Postman": <SiPostman color="#FF6C37" />,
+  "JWT": <SiJsonwebtokens color="#000000" />,
+  "Vercel": <SiVercel color="#FFFFFF" />,
+  "Netlify": <SiNetlify color="#00C7B7" />,
+  "Linux": <SiLinux color="#FCC624" />,
 };
 
 const EXPERIENCE = [
@@ -450,8 +498,9 @@ function Hero() {
           className="flex gap-6 justify-center"
         >
           {[
-            { label: "GitHub", href: "https://github.com", icon: "GH" },
-            { label: "LinkedIn", href: "https://linkedin.com", icon: "LI" },
+            { label: "GitHub", href: "https://github.com/akhilsaji-dev", icon: "GH" },
+            { label: "LinkedIn", href: "https://www.linkedin.com/in/akhil-saji-7027892b5/?skipRedirect=true", icon: "LI" },
+            { label: "Instagram", href: "https://www.instagram.com/akhi_l._/", icon: "IG" },
             { label: "Email", href: "mailto:akhilsaji0031@gmail.com", icon: "@" },
           ].map((s, i) => (
             <motion.a
@@ -469,7 +518,7 @@ function Hero() {
             </motion.a>
           ))}
         </motion.div>
-
+<br />
         {/* Scroll indicator */}
         <motion.div
           animate={{ y: [0, 10, 0] }}
@@ -480,7 +529,9 @@ function Hero() {
           <div className="w-px h-12 bg-gradient-to-b from-cyan-400/50 to-transparent" />
         </motion.div>
       </div>
+      <br />
     </Section>
+    // <br />
   );
 }
 
