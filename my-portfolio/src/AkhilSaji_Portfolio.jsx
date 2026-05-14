@@ -134,6 +134,98 @@ const PROJECTS = [
     border: "blue",
     icon: "✨",
   },
+   {
+  title: "G-TEC AI Counselor",
+  
+  subtitle: "AI-Powered Student Guidance Platform",
+
+  desc: "An intelligent AI-powered counseling platform developed for G-TEC to assist students in discovering suitable courses, career paths, and educational opportunities through interactive conversations. Features dynamic course recommendations, real-time AI chat assistance, responsive UI, and scalable full-stack architecture.",
+
+  stack: [
+    "Django",
+    "Python",
+    "OpenAI API",
+    "HTML",
+    "Tailwind CSS",
+    "JavaScript",
+    "SQLite",
+  ],
+
+  gradient: "from-violet-500/20 to-fuchsia-600/20",
+
+  border: "violet",
+
+  icon: "🤖",
+},
+
+{
+  title: "NexHire",
+
+  subtitle: "PSC & Government Job Portal",
+
+  desc: "A modern job portal platform focused on PSC and government job opportunities, allowing users to explore the latest vacancies, notifications, and recruitment updates through a clean and user-friendly interface. Features advanced job search, category-based filtering, secure authentication, responsive dashboards, and scalable full-stack architecture for efficient job discovery.",
+
+  stack: [
+    "React.js",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Tailwind CSS",
+    "JWT",
+  ],
+
+  gradient: "from-emerald-500/20 to-cyan-600/20",
+
+  border: "emerald",
+
+  icon: "💼",
+},
+
+{
+  title: "SmartMail AI",
+
+  subtitle: "Backend Email Automation System",
+
+  desc: "A backend-focused email automation system developed using Python that monitors incoming emails, analyzes message content, and generates AI-powered reply suggestions automatically. Supports both AI-generated responses and manually created replies with secure email handling, automated message processing, and real-time email workflow management.",
+
+  stack: [
+    "Python",
+    "Flask",
+    "OpenAI API",
+    "SMTP",
+    "IMAP",
+  ],
+
+  gradient: "from-blue-500/20 to-cyan-600/20",
+
+  border: "blue",
+
+  icon: "📧",
+},
+
+{
+  title: "MultiQuery AI",
+
+  subtitle: "MERN-Based Multi-Response AI Platform",
+
+  desc: "A full-stack AI platform built using the MERN stack that generates multiple types of responses for a single user query, including normal, detailed, and in-depth explanations. Features dynamic AI response generation, real-time chat interface, categorized answer modes, responsive UI, and scalable backend architecture for intelligent conversational experiences.",
+
+  stack: [
+    "MongoDB",
+    "Express.js",
+    "React.js",
+    "Node.js",
+    "OpenAI API",
+    "Tailwind CSS",
+    "JWT",
+  ],
+
+  gradient: "from-violet-500/20 to-fuchsia-600/20",
+
+  border: "violet",
+
+  icon: "🧠",
+}
 ];
 
 const EDUCATION = [
