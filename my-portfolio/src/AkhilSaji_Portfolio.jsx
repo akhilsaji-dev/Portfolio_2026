@@ -635,56 +635,391 @@ function About() {
 }
 
 // ─── SKILLS ───────────────────────────────────────────────────────────────────
+// function Skills() {
+//   const ref = useRef(null);
+//   const inView = useInView(ref, { once: true, margin: "-100px" });
+//   const categoryColors = {
+//     "Languages": "from-cyan-500 to-blue-500",
+//     "Frontend": "from-purple-500 to-pink-500",
+//     "Backend": "from-green-500 to-emerald-400",
+//     "Tools": "from-orange-400 to-amber-400",
+//   };
+//   return (
+//     <Section id="skills" className="py-32 px-6">
+//       <div className="max-w-7xl mx-auto">
+//         <SectionTitle label="// what i know" title="Technical Skills" subtitle="A curated toolkit of technologies I use to build powerful applications" />
+//         <div ref={ref} className="grid md:grid-cols-2 gap-6">
+//           {Object.entries(SKILLS).map(([cat, items], ci) => (
+//             <motion.div
+//               key={cat}
+//               variants={fadeUp} custom={ci} initial="hidden" animate={inView ? "visible" : "hidden"}
+//               whileHover={{ scale: 1.02 }}
+//               className="p-8 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 backdrop-blur-sm hover:border-white/20 transition-all duration-500"
+//             >
+//               <div className="flex items-center gap-3 mb-6">
+//                 <div className={`h-0.5 w-8 bg-gradient-to-r ${categoryColors[cat]}`} />
+//                 <h3 className={`text-sm font-mono font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-r ${categoryColors[cat]}`}>
+//                   {cat}
+//                 </h3>
+//               </div>
+//               <div className="flex flex-wrap gap-3">
+//                 {items.map((skill, si) => (
+//                   <motion.div
+//                     key={skill}
+//                     initial={{ opacity: 0, scale: 0.8 }}
+//                     animate={inView ? { opacity: 1, scale: 1 } : {}}
+//                     transition={{ delay: ci * 0.1 + si * 0.07 }}
+//                     whileHover={{ scale: 1.1, y: -3 }}
+//                     className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-cyan-400/30 hover:bg-cyan-400/5 text-gray-300 hover:text-white text-sm transition-all duration-300 cursor-default"
+//                   >
+//                     <span>{SKILL_ICONS[skill] || "◆"}</span>
+//                     <span className="font-medium">{skill}</span>
+//                   </motion.div>
+//                 ))}
+//               </div>
+//             </motion.div>
+//           ))}
+//         </div>
+//       </div>
+//     </Section>
+//   );
+// }
+// function Skills() {
+//   const ref = useRef(null);
+
+//   const inView = useInView(ref, {
+//     once: true,
+//     margin: "-100px",
+//   });
+
+//   import {
+//   Code2,
+//   Palette,
+//   ServerCog,
+//   Wrench,
+// } from "lucide-react";
+
+// const categoryStyles = {
+//   Languages: {
+//     border: "border-cyan-400/30",
+//     glow: "shadow-cyan-500/20",
+//     icon: Code2,
+//   },
+
+//   Frontend: {
+//     border: "border-pink-400/30",
+//     glow: "shadow-pink-500/20",
+//     icon: Palette,
+//   },
+
+//   Backend: {
+//     border: "border-green-400/30",
+//     glow: "shadow-green-500/20",
+//     icon: ServerCog,
+//   },
+
+//   Tools: {
+//     border: "border-orange-400/30",
+//     glow: "shadow-orange-500/20",
+//     icon: Wrench,
+//   },
+// };
+
+//   return (
+//     <Section
+//       id="skills"
+//       className="relative py-32 px-6 overflow-hidden"
+//     >
+//       {/* Background */}
+//       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,255,255,0.08),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(168,85,247,0.08),transparent_30%)]" />
+
+//       <div className="relative max-w-7xl mx-auto">
+//         <SectionTitle
+//           label="// expertise"
+//           title="Skills & Technologies"
+//           subtitle="Modern technologies I use to build scalable and immersive digital products."
+//         />
+
+//         {/* Bento Grid Layout */}
+//         <div
+//           ref={ref}
+//           className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mt-20"
+//         >
+//           {Object.entries(SKILLS).map(([category, items], ci) => (
+//             <motion.div
+//               key={category}
+//               initial={{ opacity: 0, y: 60 }}
+//               animate={
+//                 inView
+//                   ? { opacity: 1, y: 0 }
+//                   : {}
+//               }
+//               transition={{
+//                 duration: 0.6,
+//                 delay: ci * 0.15,
+//               }}
+//               whileHover={{
+//                 y: -8,
+//               }}
+//               className={`group relative overflow-hidden rounded-[32px] border ${categoryStyles[category].border} bg-white/[0.03] backdrop-blur-xl p-7 transition-all duration-500 hover:shadow-2xl ${categoryStyles[category].glow}`}
+//             >
+//               {/* Glass Glow */}
+//               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-white/5 to-transparent" />
+
+//               {/* Top */}
+//               <div className="relative flex items-center justify-between mb-8">
+//                 <div>
+//                   <p className="text-4xl">
+//                     {categoryStyles[category].icon}
+//                   </p>
+
+//                   <h3 className="mt-4 text-xl font-bold text-white">
+//                     {category}
+//                   </h3>
+
+//                   <p className="text-sm text-gray-500 mt-1">
+//                     {items.length} Technologies
+//                   </p>
+//                 </div>
+
+//                 <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 text-xl group-hover:rotate-12 transition duration-500">
+//                   ✦
+//                 </div>
+//               </div>
+
+//               {/* Skills */}
+//               <div className="space-y-3">
+//                 {items.map((skill, si) => (
+//                   <motion.div
+//                     key={skill}
+//                     initial={{ opacity: 0, x: -20 }}
+//                     animate={
+//                       inView
+//                         ? { opacity: 1, x: 0 }
+//                         : {}
+//                     }
+//                     transition={{
+//                       delay: ci * 0.12 + si * 0.05,
+//                     }}
+//                     whileHover={{
+//                       scale: 1.03,
+//                       x: 4,
+//                     }}
+//                     className="group/item relative overflow-hidden"
+//                   >
+//                     <div className="absolute inset-0 rounded-2xl bg-white/5 opacity-0 group-hover/item:opacity-100 transition duration-300" />
+
+//                     <div className="relative flex items-center justify-between px-4 py-3 rounded-2xl border border-white/10 bg-black/20 backdrop-blur-md">
+//                       <div className="flex items-center gap-3">
+//                         <span className="text-lg">
+//                           {SKILL_ICONS[skill] || "◆"}
+//                         </span>
+
+//                         <span className="text-sm font-medium text-gray-300">
+//                           {skill}
+//                         </span>
+//                       </div>
+
+//                       <div className="w-2 h-2 rounded-full bg-white/30 group-hover/item:bg-cyan-400 transition duration-300" />
+//                     </div>
+//                   </motion.div>
+//                 ))}
+//               </div>
+
+//               {/* Bottom Glow */}
+//               <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-white/10 blur-3xl rounded-full opacity-20" />
+//             </motion.div>
+//           ))}
+//         </div>
+//       </div>
+//     </Section>
+//   );
+// }
+import {
+  Code2,
+  Palette,
+  ServerCog,
+  Wrench,
+  Sparkles,
+} from "lucide-react";
+
 function Skills() {
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
-  const categoryColors = {
-    "Languages": "from-cyan-500 to-blue-500",
-    "Frontend": "from-purple-500 to-pink-500",
-    "Backend": "from-green-500 to-emerald-400",
-    "Tools": "from-orange-400 to-amber-400",
+
+  const inView = useInView(ref, {
+    once: true,
+    margin: "-100px",
+  });
+
+  const categoryStyles = {
+    Languages: {
+      border: "border-cyan-400/30",
+      glow: "shadow-cyan-500/20",
+      icon: Code2,
+      iconColor: "text-cyan-400",
+    },
+
+    Frontend: {
+      border: "border-pink-400/30",
+      glow: "shadow-pink-500/20",
+      icon: Palette,
+      iconColor: "text-pink-400",
+    },
+
+    Backend: {
+      border: "border-green-400/30",
+      glow: "shadow-green-500/20",
+      icon: ServerCog,
+      iconColor: "text-green-400",
+    },
+
+    Tools: {
+      border: "border-orange-400/30",
+      glow: "shadow-orange-500/20",
+      icon: Wrench,
+      iconColor: "text-orange-400",
+    },
   };
+
   return (
-    <Section id="skills" className="py-32 px-6">
-      <div className="max-w-7xl mx-auto">
-        <SectionTitle label="// what i know" title="Technical Skills" subtitle="A curated toolkit of technologies I use to build powerful applications" />
-        <div ref={ref} className="grid md:grid-cols-2 gap-6">
-          {Object.entries(SKILLS).map(([cat, items], ci) => (
-            <motion.div
-              key={cat}
-              variants={fadeUp} custom={ci} initial="hidden" animate={inView ? "visible" : "hidden"}
-              whileHover={{ scale: 1.02 }}
-              className="p-8 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 backdrop-blur-sm hover:border-white/20 transition-all duration-500"
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <div className={`h-0.5 w-8 bg-gradient-to-r ${categoryColors[cat]}`} />
-                <h3 className={`text-sm font-mono font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-r ${categoryColors[cat]}`}>
-                  {cat}
-                </h3>
-              </div>
-              <div className="flex flex-wrap gap-3">
-                {items.map((skill, si) => (
-                  <motion.div
-                    key={skill}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={inView ? { opacity: 1, scale: 1 } : {}}
-                    transition={{ delay: ci * 0.1 + si * 0.07 }}
-                    whileHover={{ scale: 1.1, y: -3 }}
-                    className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-cyan-400/30 hover:bg-cyan-400/5 text-gray-300 hover:text-white text-sm transition-all duration-300 cursor-default"
-                  >
-                    <span>{SKILL_ICONS[skill] || "◆"}</span>
-                    <span className="font-medium">{skill}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
+    <Section
+      id="skills"
+      className="relative py-32 px-6 overflow-hidden"
+    >
+      {/* Background */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,255,255,0.08),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(168,85,247,0.08),transparent_30%)]" />
+
+      <div className="relative max-w-7xl mx-auto">
+        <SectionTitle
+          label="// expertise"
+          title="Skills & Technologies"
+          subtitle="Modern technologies I use to build scalable and immersive digital products."
+        />
+
+        {/* Grid */}
+        <div
+          ref={ref}
+          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mt-20"
+        >
+          {Object.entries(SKILLS).map(
+            ([category, items], ci) => {
+              const config =
+                categoryStyles[category];
+
+              const Icon = config.icon;
+
+              return (
+                <motion.div
+                  key={category}
+                  initial={{
+                    opacity: 0,
+                    y: 60,
+                  }}
+                  animate={
+                    inView
+                      ? {
+                          opacity: 1,
+                          y: 0,
+                        }
+                      : {}
+                  }
+                  transition={{
+                    duration: 0.6,
+                    delay: ci * 0.15,
+                  }}
+                  whileHover={{
+                    y: -8,
+                  }}
+                  className={`group relative overflow-hidden rounded-[32px] border ${config.border} bg-white/[0.03] backdrop-blur-xl p-7 transition-all duration-500 hover:shadow-2xl ${config.glow}`}
+                >
+                  {/* Hover Glow */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-white/5 to-transparent" />
+
+                  {/* Top */}
+                  <div className="relative flex items-center justify-between mb-8">
+                    <div>
+                      {/* Main Icon */}
+                      <div
+                        className={`w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center ${config.iconColor}`}
+                      >
+                        <Icon className="w-8 h-8" />
+                      </div>
+
+                      <h3 className="mt-5 text-xl font-bold text-white">
+                        {category}
+                      </h3>
+
+                      <p className="text-sm text-gray-500 mt-1">
+                        {items.length} Technologies
+                      </p>
+                    </div>
+
+                    {/* Sparkle Icon */}
+                    <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 group-hover:rotate-12 transition duration-500">
+                      <Sparkles className="w-5 h-5" />
+                    </div>
+                  </div>
+
+                  {/* Skills */}
+                  <div className="space-y-3">
+                    {items.map((skill, si) => (
+                      <motion.div
+                        key={skill}
+                        initial={{
+                          opacity: 0,
+                          x: -20,
+                        }}
+                        animate={
+                          inView
+                            ? {
+                                opacity: 1,
+                                x: 0,
+                              }
+                            : {}
+                        }
+                        transition={{
+                          delay:
+                            ci * 0.12 +
+                            si * 0.05,
+                        }}
+                        whileHover={{
+                          scale: 1.03,
+                          x: 4,
+                        }}
+                        className="group/item relative overflow-hidden"
+                      >
+                        <div className="absolute inset-0 rounded-2xl bg-white/5 opacity-0 group-hover/item:opacity-100 transition duration-300" />
+
+                        <div className="relative flex items-center justify-between px-4 py-3 rounded-2xl border border-white/10 bg-black/20 backdrop-blur-md">
+                          <div className="flex items-center gap-3">
+                            <span className="text-lg">
+                              {SKILL_ICONS[
+                                skill
+                              ] || "◆"}
+                            </span>
+
+                            <span className="text-sm font-medium text-gray-300">
+                              {skill}
+                            </span>
+                          </div>
+
+                          <div className="w-2 h-2 rounded-full bg-white/30 group-hover/item:bg-cyan-400 transition duration-300" />
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+
+                  {/* Bottom Glow */}
+                  <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-white/10 blur-3xl rounded-full opacity-20" />
+                </motion.div>
+              );
+            }
+          )}
         </div>
       </div>
     </Section>
   );
 }
-
 // ─── EXPERIENCE ───────────────────────────────────────────────────────────────
 function Experience() {
   const ref = useRef(null);
