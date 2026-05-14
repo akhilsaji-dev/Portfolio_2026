@@ -582,14 +582,14 @@ function About() {
                 transition={{ repeat: Infinity, duration: 3 }}
                 className="absolute -top-4 -right-4 bg-cyan-500/10 border border-cyan-400/30 backdrop-blur-sm px-3 py-1.5 rounded-xl text-cyan-400 text-sm font-mono"
               >
-                ⚡ MERN Dev
+              MERN Developer
               </motion.div>
               <motion.div
                 animate={{ y: [0, 8, 0] }}
                 transition={{ repeat: Infinity, duration: 3.5, delay: 0.5 }}
                 className="absolute -bottom-4 -left-4 bg-purple-500/10 border border-purple-400/30 backdrop-blur-sm px-3 py-1.5 rounded-xl text-purple-400 text-sm font-mono"
               >
-                🎓 Educator
+              Educator
               </motion.div>
             </div>
           </motion.div>
@@ -882,6 +882,7 @@ function Skills() {
   };
 
   return (
+    
     <Section
       id="skills"
       className="relative py-32 px-6 overflow-hidden"
