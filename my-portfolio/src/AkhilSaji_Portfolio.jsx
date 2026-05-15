@@ -49,7 +49,6 @@ const SKILL_ICONS = {
   "Tailwind CSS": <SiTailwindcss color="#06B6D4" />,
   "Framer Motion": <SiFramer color="#0055FF" />,
   "Bootstrap": <SiBootstrap color="#7952B3" />,
-  "Material UI": <SiMui color="#007FFF" />,
 
   "Node.js": <SiNodedotjs color="#339933" />,
   "Express.js": <SiExpress color="#FFFFFF" />,
@@ -64,7 +63,6 @@ const SKILL_ICONS = {
   "JWT": <SiJsonwebtokens color="#000000" />,
   "Vercel": <SiVercel color="#FFFFFF" />,
   "Netlify": <SiNetlify color="#00C7B7" />,
-  "Linux": <SiLinux color="#FCC624" />,
 };
 
 const EXPERIENCE = [
@@ -225,7 +223,50 @@ const PROJECTS = [
   border: "violet",
 
   icon: "🧠",
-}
+},
+{
+  title: "Experience Tracker",
+
+  subtitle: "MERN-Based Employee Experience Management System",
+
+  desc: "A full-stack experience tracking platform developed using the MERN stack that allows organizations to manage employee work experience, project history, skills, and performance records efficiently. Features secure authentication, dynamic profile management, experience timeline tracking, real-time CRUD operations, responsive dashboard UI, and scalable backend architecture for seamless workforce management.",
+
+  stack: [
+    "MongoDB",
+    "Express.js",
+    "React.js",
+    "Node.js",
+    "JWT",
+    "Tailwind CSS",
+  ],
+
+  gradient: "from-emerald-500/20 to-cyan-600/20",
+
+  border: "emerald",
+
+  icon: "📊",
+},
+{
+  title: "Netflix Clone",
+
+  subtitle: "MERN-Based Movie Streaming Platform",
+
+  desc: "A responsive Netflix-inspired streaming platform built using the MERN stack with dynamic movie browsing, trending categories, banner previews, and real-time API-powered content fetching. Features user authentication, protected routes, interactive UI animations, movie trailers, categorized content sections, responsive design, and scalable backend integration for a modern OTT-style experience.",
+
+  stack: [
+    "React.js",
+    "Node.js",
+    "TMDB API",
+    "JWT",
+    "CSS",
+  ],
+
+  gradient: "from-red-500/20 to-zinc-700/20",
+
+  border: "red",
+
+  icon: "🎬",
+},
 ];
 
 const EDUCATION = [
@@ -1231,7 +1272,7 @@ function ProjectCard({ project, index }) {
             whileTap={{ scale: 0.95 }}
             className="flex-1 py-2.5 rounded-xl bg-white/5 border border-white/10 text-gray-300 text-sm font-semibold hover:bg-white/10 transition-all duration-300 text-center"
           >
-            🐙 GitHub
+            {project.github_link ? "💻 View Code" : "View Repo"}
           </motion.button>
         </div>
       </motion.div>
