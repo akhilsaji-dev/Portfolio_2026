@@ -27,13 +27,15 @@ import {
   SiMysql,
   SiC,
   SiCplusplus,
-   SiSharp,
+  SiSharp,
 } from "react-icons/si";
+
+
 // ─── DATA ────────────────────────────────────────────────────────────────────
 const NAV_LINKS = ["About", "Skills", "Experience", "Projects", "Education", "Contact"];
 
 const SKILLS = {
-  "Languages": ["JavaScript (ES6+)", "Python", "Java", "C#", "C", "C++", ],
+  "Languages": ["JavaScript (ES6+)", "Python", "Java", "C#", "C", "C++",],
   "Frontend": ["React.js", "Tailwind CSS", "Framer Motion", "Bootstrap", "Material UI"],
   "Backend": ["Node.js", "Express.js", "MongoDB", "RESTful APIs", "Django REST Framework", "MySQL"],
   "Tools": ["Git", "GitHub", "Postman", "JWT", "Vercel", "Netlify", "Linux"],
@@ -89,6 +91,7 @@ const EXPERIENCE = [
       "Provided hands-on support for academic and client projects including backend integration and debugging.",
       "Mentored students through the full project lifecycle — UI/UX, database design, deployment, and documentation.",
     ],
+
   },
   {
     role: "MERN Stack Development Intern",
@@ -113,15 +116,7 @@ const PROJECTS = [
     gradient: "from-cyan-500/20 to-blue-600/20",
     border: "cyan",
     icon: "🛍️",
-  },
-  {
-    title: "Real Estate App",
-    subtitle: "Modern Property Platform",
-    desc: "A web-based platform designed to simplify property browsing and enhance user experience. Provides a seamless way to browse, list, and manage properties with advanced search/filtering, interactive listings, and real-time availability updates.",
-    stack: ["React.js", "Node.js", "Express.js", "MongoDB", "React Router DOM"],
-    gradient: "from-purple-500/20 to-pink-600/20",
-    border: "purple",
-    icon: "🏠",
+    github_link: ""
   },
   {
     title: "Personal Portfolio",
@@ -131,142 +126,143 @@ const PROJECTS = [
     gradient: "from-blue-500/20 to-violet-600/20",
     border: "blue",
     icon: "✨",
+    github_link: "https://github.com/akhilsaji-dev/Portfolio_2026.git",
   },
-   {
-  title: "G-TEC AI Counselor",
-  
-  subtitle: "AI-Powered Student Guidance Platform",
+  {
+    title: "G-TEC AI Counselor",
 
-  desc: "An intelligent AI-powered counseling platform developed for G-TEC to assist students in discovering suitable courses, career paths, and educational opportunities through interactive conversations. Features dynamic course recommendations, real-time AI chat assistance, responsive UI, and scalable full-stack architecture.",
+    subtitle: "AI-Powered Student Guidance Platform",
 
-  stack: [
-    "Django",
-    "Python",
-    "OpenAI API",
-    "HTML",
-    "Tailwind CSS",
-    "JavaScript",
-    "SQLite",
-  ],
+    desc: "An intelligent AI-powered counseling platform developed for G-TEC to assist students in discovering suitable courses, career paths, and educational opportunities through interactive conversations. Features dynamic course recommendations, real-time AI chat assistance, responsive UI, and scalable full-stack architecture.",
 
-  gradient: "from-violet-500/20 to-fuchsia-600/20",
+    stack: [
+      "Django",
+      "Python",
+      "OpenAI API",
+      "HTML",
+      "Tailwind CSS",
+      "JavaScript",
+      "SQLite",
 
-  border: "violet",
+    ],
+    github_link: "https://github.com/akhilsaji-dev/G-TEC-AI-COUNSELOR.git",
+    gradient: "from-violet-500/20 to-fuchsia-600/20",
 
-  icon: "🤖",
-},
+    border: "violet",
 
-{
-  title: "NexHire",
+    icon: "🤖",
+  },
 
-  subtitle: "PSC & Government Job Portal",
+  {
+    title: "NexHire",
 
-  desc: "A modern job portal platform focused on PSC and government job opportunities, allowing users to explore the latest vacancies, notifications, and recruitment updates through a clean and user-friendly interface. Features advanced job search, category-based filtering, secure authentication, responsive dashboards, and scalable full-stack architecture for efficient job discovery.",
+    subtitle: "PSC & Government Job Portal",
 
-  stack: [
-    "React.js",
-    "Node.js",
-    "Express.js",
-    "MongoDB",
-    "Tailwind CSS",
-    "JWT",
-  ],
+    desc: "A modern job portal platform focused on PSC and government job opportunities, allowing users to explore the latest vacancies, notifications, and recruitment updates through a clean and user-friendly interface. Features advanced job search, category-based filtering, secure authentication, responsive dashboards, and scalable full-stack architecture for efficient job discovery.",
 
-  gradient: "from-emerald-500/20 to-cyan-600/20",
+    stack: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Tailwind CSS",
+      "JWT",
+    ],
+    github_link: "https://github.com/akhilsaji-dev/india-govt-job-portal.git",
+    gradient: "from-emerald-500/20 to-cyan-600/20",
 
-  border: "emerald",
+    border: "emerald",
 
-  icon: "💼",
-},
+    icon: "💼",
+  },
 
-{
-  title: "SmartMail AI",
+  {
+    title: "SmartMail AI",
 
-  subtitle: "Backend Email Automation System",
+    subtitle: "Backend Email Automation System",
 
-  desc: "A backend-focused email automation system developed using Python that monitors incoming emails, analyzes message content, and generates AI-powered reply suggestions automatically. Supports both AI-generated responses and manually created replies with secure email handling, automated message processing, and real-time email workflow management.",
+    desc: "A backend-focused email automation system developed using Python that monitors incoming emails, analyzes message content, and generates AI-powered reply suggestions automatically. Supports both AI-generated responses and manually created replies with secure email handling, automated message processing, and real-time email workflow management.",
 
-  stack: [
-    "Python",
-    "Flask",
-    "OpenAI API",
-    "SMTP",
-    "IMAP",
-  ],
+    stack: [
+      "Python",
+      "OpenAI API",
+      "SMTP",
+      "IMAP",
+    ],
+    github_link: "https://github.com/akhilsaji-dev/Email_auto_reply.git",
+    gradient: "from-blue-500/20 to-cyan-600/20",
 
-  gradient: "from-blue-500/20 to-cyan-600/20",
+    border: "blue",
 
-  border: "blue",
+    icon: "📧",
+  },
 
-  icon: "📧",
-},
+  {
+    title: "MultiQuery AI",
 
-{
-  title: "MultiQuery AI",
+    subtitle: "MERN-Based Multi-Response AI Platform",
 
-  subtitle: "MERN-Based Multi-Response AI Platform",
+    desc: "A full-stack AI platform built using the MERN stack that generates multiple types of responses for a single user query, including normal, detailed, and in-depth explanations. Features dynamic AI response generation, real-time chat interface, categorized answer modes, responsive UI, and scalable backend architecture for intelligent conversational experiences.",
 
-  desc: "A full-stack AI platform built using the MERN stack that generates multiple types of responses for a single user query, including normal, detailed, and in-depth explanations. Features dynamic AI response generation, real-time chat interface, categorized answer modes, responsive UI, and scalable backend architecture for intelligent conversational experiences.",
+    stack: [
+      "MongoDB",
+      "Express.js",
+      "React.js",
+      "Node.js",
+      "OpenAI API",
+      "Tailwind CSS",
+      "JWT",
+    ],
+    github_link: "https://github.com/akhilsaji-dev/Study_buddy_AI.git",
+    gradient: "from-violet-500/20 to-fuchsia-600/20",
 
-  stack: [
-    "MongoDB",
-    "Express.js",
-    "React.js",
-    "Node.js",
-    "OpenAI API",
-    "Tailwind CSS",
-    "JWT",
-  ],
+    border: "violet",
 
-  gradient: "from-violet-500/20 to-fuchsia-600/20",
+    icon: "🧠",
+  },
+  {
+    title: "Experience Tracker",
 
-  border: "violet",
+    subtitle: "MERN-Based Employee Experience Management System",
 
-  icon: "🧠",
-},
-{
-  title: "Experience Tracker",
+    desc: "A full-stack experience tracking platform developed using the MERN stack that allows organizations to manage employee work experience, project history, skills, and performance records efficiently. Features secure authentication, dynamic profile management, experience timeline tracking, real-time CRUD operations, responsive dashboard UI, and scalable backend architecture for seamless workforce management.",
 
-  subtitle: "MERN-Based Employee Experience Management System",
+    stack: [
+      "MongoDB",
+      "Express.js",
+      "React.js",
+      "Node.js",
+      "JWT",
+      "Tailwind CSS",
+    ],
+    github_link: "https://github.com/akhilsaji-dev/Expense_Tracker.git",
+    gradient: "from-emerald-500/20 to-cyan-600/20",
 
-  desc: "A full-stack experience tracking platform developed using the MERN stack that allows organizations to manage employee work experience, project history, skills, and performance records efficiently. Features secure authentication, dynamic profile management, experience timeline tracking, real-time CRUD operations, responsive dashboard UI, and scalable backend architecture for seamless workforce management.",
+    border: "emerald",
 
-  stack: [
-    "MongoDB",
-    "Express.js",
-    "React.js",
-    "Node.js",
-    "JWT",
-    "Tailwind CSS",
-  ],
+    icon: "📊",
+  },
+  {
+    title: "Netflix Clone",
 
-  gradient: "from-emerald-500/20 to-cyan-600/20",
+    subtitle: "MERN-Based Movie Streaming Platform",
 
-  border: "emerald",
+    desc: "A responsive Netflix-inspired streaming platform built using the MERN stack with dynamic movie browsing, trending categories, banner previews, and real-time API-powered content fetching. Features user authentication, protected routes, interactive UI animations, movie trailers, categorized content sections, responsive design, and scalable backend integration for a modern OTT-style experience.",
 
-  icon: "📊",
-},
-{
-  title: "Netflix Clone",
+    stack: [
+      "React.js",
+      "Node.js",
+      "TMDB API",
+      "JWT",
+      "CSS",
+    ],
+    github_link: "https://github.com/akhilsaji-dev/NETFLIX_CLONE.git",
+    gradient: "from-red-500/20 to-zinc-700/20",
 
-  subtitle: "MERN-Based Movie Streaming Platform",
+    border: "red",
 
-  desc: "A responsive Netflix-inspired streaming platform built using the MERN stack with dynamic movie browsing, trending categories, banner previews, and real-time API-powered content fetching. Features user authentication, protected routes, interactive UI animations, movie trailers, categorized content sections, responsive design, and scalable backend integration for a modern OTT-style experience.",
-
-  stack: [
-    "React.js",
-    "Node.js",
-    "TMDB API",
-    "JWT",
-    "CSS",
-  ],
-
-  gradient: "from-red-500/20 to-zinc-700/20",
-
-  border: "red",
-
-  icon: "🎬",
-},
+    icon: "🎬",
+  },
 ];
 
 const EDUCATION = [
@@ -441,9 +437,8 @@ function Navbar({ active }) {
     <motion.nav
       animate={{ y: hidden ? -100 : 0 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "py-3 backdrop-blur-xl bg-black/60 border-b border-cyan-500/10" : "py-5"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "py-3 backdrop-blur-xl bg-black/60 border-b border-cyan-500/10" : "py-5"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <motion.a
@@ -461,11 +456,10 @@ function Navbar({ active }) {
               key={link}
               onClick={() => scrollTo(link)}
               whileHover={{ scale: 1.05 }}
-              className={`px-4 py-2 rounded-lg text-sm font-medium tracking-wide transition-all duration-300 ${
-                active === link.toLowerCase()
+              className={`px-4 py-2 rounded-lg text-sm font-medium tracking-wide transition-all duration-300 ${active === link.toLowerCase()
                   ? "text-cyan-400 bg-cyan-400/10 border border-cyan-400/30"
                   : "text-gray-400 hover:text-cyan-300 hover:bg-white/5"
-              }`}
+                }`}
             >
               {link}
             </motion.button>
@@ -651,7 +645,7 @@ function Hero() {
             </motion.a>
           ))}
         </motion.div>
-<br />
+        <br />
         {/* Scroll indicator */}
         <motion.div
           animate={{ y: [0, 10, 0] }}
@@ -674,8 +668,8 @@ function About() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const stats = [
     { val: "3+", label: "Years Learning" },
-    { val: "100+", label: "Students Trained" },
-    { val: "5+", label: "Projects Built" },
+    { val: "150+", label: "Students Trained" },
+    { val: "8+", label: "Projects Built" },
     { val: "3", label: "Languages" },
   ];
   return (
@@ -691,11 +685,11 @@ function About() {
             <div className="relative">
               <div className="w-72 h-72 rounded-3xl bg-gradient-to-br from-cyan-500/20 via-blue-600/10 to-purple-500/20 backdrop-blur-xl border border-white/10 flex items-center justify-center relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/5 to-purple-500/5" />
-      <img
-      src={profileImg}
-      alt="Akhil Saji"
-      className="w-full h-full object-cover rounded-3xl"
-    />
+                <img
+                  src={profileImg}
+                  alt="Akhil Saji"
+                  className="w-full h-full object-cover rounded-3xl"
+                />
                 {/* Animated border */}
                 <motion.div
                   animate={{ rotate: 360 }}
@@ -715,14 +709,14 @@ function About() {
                 transition={{ repeat: Infinity, duration: 3 }}
                 className="absolute -top-4 -right-4 bg-cyan-500/10 border border-cyan-400/30 backdrop-blur-sm px-3 py-1.5 rounded-xl text-cyan-400 text-sm font-mono"
               >
-              MERN Developer
+                MERN Developer
               </motion.div>
               <motion.div
                 animate={{ y: [0, 8, 0] }}
                 transition={{ repeat: Infinity, duration: 3.5, delay: 0.5 }}
                 className="absolute -bottom-4 -left-4 bg-purple-500/10 border border-purple-400/30 backdrop-blur-sm px-3 py-1.5 rounded-xl text-purple-400 text-sm font-mono"
               >
-              Educator
+                Educator
               </motion.div>
             </div>
           </motion.div>
@@ -1015,7 +1009,7 @@ function Skills() {
   };
 
   return (
-    
+
     <Section
       id="skills"
       className="relative py-32 px-6 overflow-hidden"
@@ -1052,9 +1046,9 @@ function Skills() {
                   animate={
                     inView
                       ? {
-                          opacity: 1,
-                          y: 0,
-                        }
+                        opacity: 1,
+                        y: 0,
+                      }
                       : {}
                   }
                   transition={{
@@ -1106,9 +1100,9 @@ function Skills() {
                         animate={
                           inView
                             ? {
-                                opacity: 1,
-                                x: 0,
-                              }
+                              opacity: 1,
+                              x: 0,
+                            }
                             : {}
                         }
                         transition={{
@@ -1260,20 +1254,26 @@ function ProjectCard({ project, index }) {
           ))}
         </div>
         <div className="flex gap-3">
-          <motion.button
+          <motion.a
+            href={project.live_link}
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="flex-1 py-2.5 rounded-xl bg-white/10 border border-white/10 text-white text-sm font-semibold hover:bg-white/15 transition-all duration-300 text-center"
           >
             🔗 Live Demo
-          </motion.button>
-          <motion.button
+          </motion.a>
+          <motion.a
+            href={project.github_link}
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="flex-1 py-2.5 rounded-xl bg-white/5 border border-white/10 text-gray-300 text-sm font-semibold hover:bg-white/10 transition-all duration-300 text-center"
           >
-            {project.github_link ? "💻 View Code" : "View Repo"}
-          </motion.button>
+          View in GitHub
+          </motion.a>
         </div>
       </motion.div>
     </motion.div>
@@ -1379,6 +1379,144 @@ function Education() {
 }
 
 // ─── CONTACT ──────────────────────────────────────────────────────────────────
+// import {
+//   FiMail,
+//   FiPhone,
+//   FiMapPin,
+//   FiGithub,
+// } from "react-icons/fi";
+// function Contact() {
+//   const ref = useRef(null);
+//   const inView = useInView(ref, { once: true, margin: "-100px" });
+//   const [sent, setSent] = useState(false);
+
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     setSent(true);
+//     setTimeout(() => setSent(false), 3000);
+//   };
+
+//   const links = [
+   
+//   {
+//     label: "Email",
+//     value: "akhilsaji0031@gmail.com",
+//     href: "mailto:akhilsaji0031@gmail.com",
+//     icon: FiMail,
+//   },
+//   {
+//     label: "Phone",
+//     value: "+91 7909202767",
+//     href: "tel:+917909202767",
+//     icon: FiPhone,
+//   },
+//   {
+//     label: "Location",
+//     value: "Thodupuzha, Kerala, India",
+//     href: "#",
+//     icon: FiMapPin,
+//   },
+//   {
+//     label: "GitHub",
+//     value: "github.com/akhilsaji-dev",
+//     href: "https://github.com/akhilsaji-dev",
+//     icon: FiGithub,
+//   },
+// ];
+  
+
+//   return (
+//     <Section id="contact" className="py-32 px-6 pb-20">
+//       <div className="max-w-6xl mx-auto">
+//         <SectionTitle label="// let's connect" title="Get In Touch" subtitle="Have a project in mind or want to collaborate? Let's talk." />
+//         <div ref={ref} className="grid md:grid-cols-2 gap-12 items-start">
+//           {/* Contact info */}
+//           <motion.div
+//             variants={fadeUp} initial="hidden" animate={inView ? "visible" : "hidden"}
+//           >
+//             <p className="text-gray-400 text-lg leading-relaxed mb-10">
+//               I'm currently open to new opportunities and exciting projects. Whether you have a question, a proposal, or just want to say hi — my inbox is always open.
+//             </p>
+//             <div className="space-y-4">
+//               {links.map((l, i) => (
+//                 <motion.a
+//                   key={l.label}
+//                   href={l.href}
+//                   variants={fadeUp} custom={i + 1} initial="hidden" animate={inView ? "visible" : "hidden"}
+//                   whileHover={{ scale: 1.02, x: 6 }}
+//                   className="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-cyan-400/30 hover:bg-cyan-400/5 transition-all duration-300 group"
+//                 >
+//                   <item.icon className="w-5 h-5" />
+//                   <div>
+//                     <p className="text-xs text-gray-500 font-mono uppercase tracking-wider">{l.label}</p>
+//                     <p className="text-gray-300 group-hover:text-white text-sm font-medium transition-colors">{l.value}</p>
+//                   </div>
+//                 </motion.a>
+//               ))}
+//             </div>
+//           </motion.div>
+
+//           {/* Form */}
+//           <motion.div
+//             variants={fadeUp} custom={1} initial="hidden" animate={inView ? "visible" : "hidden"}
+//             className="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-sm"
+//           >
+//             <form onSubmit={handleSubmit} className="space-y-5">
+//               {[
+//                 { id: "name", label: "Your Name", type: "text", placeholder: "John Doe" },
+//                 { id: "email", label: "Email Address", type: "email", placeholder: "john@example.com" },
+//               ].map((field) => (
+//                 <div key={field.id}>
+//                   <label htmlFor={field.id} className="text-xs font-mono text-gray-400 tracking-wider uppercase block mb-2">{field.label}</label>
+//                   <input
+//                     id={field.id}
+//                     type={field.type}
+//                     placeholder={field.placeholder}
+//                     className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-600 text-sm focus:outline-none focus:border-cyan-400/50 focus:bg-cyan-400/5 transition-all duration-300"
+//                   />
+//                 </div>
+//               ))}
+//               <div>
+//                 <label htmlFor="message" className="text-xs font-mono text-gray-400 tracking-wider uppercase block mb-2">Message</label>
+//                 <textarea
+//                   id="message"
+//                   rows={5}
+//                   placeholder="Tell me about your project..."
+//                   className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-600 text-sm focus:outline-none focus:border-cyan-400/50 focus:bg-cyan-400/5 transition-all duration-300 resize-none"
+//                 />
+//               </div>
+//               <motion.button
+//                 type="submit"
+//                 whileHover={{ scale: 1.03, boxShadow: "0 0 30px rgba(0,245,255,0.4)" }}
+//                 whileTap={{ scale: 0.97 }}
+//                 className="w-full py-4 rounded-xl font-bold text-black bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 transition-all duration-300"
+//               >
+//                 {sent ? "✓ Message Sent!" : "Send Message →"}
+//               </motion.button>
+//             </form>
+//           </motion.div>
+//         </div>
+
+//         {/* Footer */}
+//         <motion.div
+//           variants={fadeIn} custom={3} initial="hidden" animate={inView ? "visible" : "hidden"}
+//           className="mt-24 pt-8 border-t border-white/5 text-center text-gray-600 text-sm font-mono"
+//         >
+//           <p>Designed & Built by <span className="text-cyan-400">Akhil Saji</span> · 2026</p>
+//         </motion.div>
+//       </div>
+//     </Section>
+//   );
+// }
+
+import {
+  FiMail,
+  FiPhone,
+  FiMapPin,
+  FiGithub,
+} from "react-icons/fi";
+
 function Contact() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
@@ -1387,59 +1525,130 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSent(true);
-    setTimeout(() => setSent(false), 3000);
+
+    setTimeout(() => {
+      setSent(false);
+    }, 3000);
   };
 
   const links = [
-    { label: "Email", value: "akhilsaji0031@gmail.com", href: "mailto:akhilsaji0031@gmail.com", icon: "✉️" },
-    { label: "Phone", value: "+91 7909202767", href: "tel:+917909202767", icon: "📞" },
-    { label: "Location", value: "Thodupuzha, Kerala, India", href: "#", icon: "📍" },
-    { label: "GitHub", value: "github.com/akhilsaji", href: "https://github.com", icon: "🐙" },
+    {
+      label: "Email",
+      value: "akhilsaji0031@gmail.com",
+      href: "mailto:akhilsaji0031@gmail.com",
+      icon: FiMail,
+    },
+    {
+      label: "Phone",
+      value: "+91 7909202767",
+      href: "tel:+917909202767",
+      icon: FiPhone,
+    },
+    {
+      label: "Location",
+      value: "Thodupuzha, Kerala, India",
+      href: "#",
+      icon: FiMapPin,
+    },
+    {
+      label: "GitHub",
+      value: "github.com/akhilsaji-dev",
+      href: "https://github.com/akhilsaji-dev",
+      icon: FiGithub,
+    },
   ];
 
   return (
     <Section id="contact" className="py-32 px-6 pb-20">
       <div className="max-w-6xl mx-auto">
-        <SectionTitle label="// let's connect" title="Get In Touch" subtitle="Have a project in mind or want to collaborate? Let's talk." />
-        <div ref={ref} className="grid md:grid-cols-2 gap-12 items-start">
-          {/* Contact info */}
+        <SectionTitle
+          label="// let's connect"
+          title="Get In Touch"
+          subtitle="Have a project in mind or want to collaborate? Let's talk."
+        />
+
+        <div
+          ref={ref}
+          className="grid md:grid-cols-2 gap-12 items-start"
+        >
+          {/* Contact Info */}
           <motion.div
-            variants={fadeUp} initial="hidden" animate={inView ? "visible" : "hidden"}
+            variants={fadeUp}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
           >
             <p className="text-gray-400 text-lg leading-relaxed mb-10">
-              I'm currently open to new opportunities and exciting projects. Whether you have a question, a proposal, or just want to say hi — my inbox is always open.
+              I'm currently open to new opportunities and exciting
+              projects. Whether you have a question, a proposal, or
+              just want to say hi — my inbox is always open.
             </p>
+
             <div className="space-y-4">
               {links.map((l, i) => (
                 <motion.a
                   key={l.label}
                   href={l.href}
-                  variants={fadeUp} custom={i + 1} initial="hidden" animate={inView ? "visible" : "hidden"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  variants={fadeUp}
+                  custom={i + 1}
+                  initial="hidden"
+                  animate={inView ? "visible" : "hidden"}
                   whileHover={{ scale: 1.02, x: 6 }}
                   className="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-cyan-400/30 hover:bg-cyan-400/5 transition-all duration-300 group"
                 >
-                  <span className="text-xl w-8 text-center">{l.icon}</span>
+                  <div className="w-12 h-12 rounded-xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center">
+                    <l.icon className="w-5 h-5 text-cyan-400 group-hover:text-white transition-colors duration-300" />
+                  </div>
+
                   <div>
-                    <p className="text-xs text-gray-500 font-mono uppercase tracking-wider">{l.label}</p>
-                    <p className="text-gray-300 group-hover:text-white text-sm font-medium transition-colors">{l.value}</p>
+                    <p className="text-xs text-gray-500 font-mono uppercase tracking-wider">
+                      {l.label}
+                    </p>
+
+                    <p className="text-gray-300 group-hover:text-white text-sm font-medium transition-colors">
+                      {l.value}
+                    </p>
                   </div>
                 </motion.a>
               ))}
             </div>
           </motion.div>
 
-          {/* Form */}
+          {/* Contact Form */}
           <motion.div
-            variants={fadeUp} custom={1} initial="hidden" animate={inView ? "visible" : "hidden"}
+            variants={fadeUp}
+            custom={1}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
             className="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-sm"
           >
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-5"
+            >
               {[
-                { id: "name", label: "Your Name", type: "text", placeholder: "John Doe" },
-                { id: "email", label: "Email Address", type: "email", placeholder: "john@example.com" },
+                {
+                  id: "name",
+                  label: "Your Name",
+                  type: "text",
+                  placeholder: "John Doe",
+                },
+                {
+                  id: "email",
+                  label: "Email Address",
+                  type: "email",
+                  placeholder: "john@example.com",
+                },
               ].map((field) => (
                 <div key={field.id}>
-                  <label htmlFor={field.id} className="text-xs font-mono text-gray-400 tracking-wider uppercase block mb-2">{field.label}</label>
+                  <label
+                    htmlFor={field.id}
+                    className="text-xs font-mono text-gray-400 tracking-wider uppercase block mb-2"
+                  >
+                    {field.label}
+                  </label>
+
                   <input
                     id={field.id}
                     type={field.type}
@@ -1448,8 +1657,15 @@ function Contact() {
                   />
                 </div>
               ))}
+
               <div>
-                <label htmlFor="message" className="text-xs font-mono text-gray-400 tracking-wider uppercase block mb-2">Message</label>
+                <label
+                  htmlFor="message"
+                  className="text-xs font-mono text-gray-400 tracking-wider uppercase block mb-2"
+                >
+                  Message
+                </label>
+
                 <textarea
                   id="message"
                   rows={5}
@@ -1457,9 +1673,13 @@ function Contact() {
                   className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-600 text-sm focus:outline-none focus:border-cyan-400/50 focus:bg-cyan-400/5 transition-all duration-300 resize-none"
                 />
               </div>
+
               <motion.button
                 type="submit"
-                whileHover={{ scale: 1.03, boxShadow: "0 0 30px rgba(0,245,255,0.4)" }}
+                whileHover={{
+                  scale: 1.03,
+                  boxShadow: "0 0 30px rgba(0,245,255,0.4)",
+                }}
                 whileTap={{ scale: 0.97 }}
                 className="w-full py-4 rounded-xl font-bold text-black bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 transition-all duration-300"
               >
@@ -1471,10 +1691,19 @@ function Contact() {
 
         {/* Footer */}
         <motion.div
-          variants={fadeIn} custom={3} initial="hidden" animate={inView ? "visible" : "hidden"}
+          variants={fadeIn}
+          custom={3}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
           className="mt-24 pt-8 border-t border-white/5 text-center text-gray-600 text-sm font-mono"
         >
-          <p>Designed & Built by <span className="text-cyan-400">Akhil Saji</span> · 2026</p>
+          <p>
+            Designed & Built by{" "}
+            <span className="text-cyan-400">
+              Akhil Saji
+            </span>{" "}
+            · 2026
+          </p>
         </motion.div>
       </div>
     </Section>
@@ -1485,6 +1714,7 @@ function Contact() {
 export default function App() {
   const [loading, setLoading] = useState(true);
   const [active, setActive] = useState("hero");
+
 
   useEffect(() => {
     const observer = new IntersectionObserver(
